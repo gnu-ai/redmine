@@ -1,0 +1,335 @@
+/*
+ * Custom Deep Purple Theme - Violet Profond Proche du Bleu Nuit
+ * 
+ * Palette principale:
+ * - Violet profond: #3D2B58
+ * - Bleu nuit: #1A1A2E
+ * - Indigo profond: #2A1B4D
+ * - Violet royal: #4B3F72
+ * 
+ * Usage: Inclure ce fichier dans votre layout Redmine
+ */
+
+/* ========================================================================
+   COULEURS CUSTOM - VIOLET PROFOND / BLEU NUIT
+   ======================================================================== */
+
+:root {
+    /* Violet profond principal */
+    --deep-purple: #3D2B58;
+    --deep-purple-light: #5D4F8C;
+    --deep-purple-dark: #2A1B4D;
+    --deep-purple-accent: #6D4C9C;
+    
+    /* Bleu nuit */
+    --midnight-blue: #1A1A2E;
+    --dark-midnight: #0F0F1A;
+    --deep-indigo: #2F243D;
+    
+    /* Couleurs complémentaires */
+    --accent-primary: #4B3F72;
+    --accent-secondary: #8B7DBC;
+    --accent-tertiary: #7A6DB5;
+    
+    /* Couleurs de texte */
+    --text-primary: #E0E0E0;
+    --text-secondary: #B0B0B0;
+    --text-muted: #8A8A8A;
+    
+    /* Couleurs de fond */
+    --bg-primary: #1A1A2E;
+    --bg-secondary: #252538;
+    --bg-tertiary: #2F243D;
+    --bg-card: #1F1F2E;
+    
+    /* Couleurs de bordure */
+    --border-color: #3D2B58;
+    --border-light: #4B3F72;
+    
+    /* Couleurs d'action */
+    --hover-color: #5D4F8C;
+    --active-color: #6D4C9C;
+    --focus-color: #8B7DBC;
+}
+
+/* ========================================================================
+   STYLES GLOBAUX
+   ======================================================================== */
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* ========================================================================
+   EN-TÊTES
+   ======================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--accent-secondary);
+    font-weight: 600;
+}
+
+/* ========================================================================
+   LIENS
+   ======================================================================== */
+
+a {
+    color: var(--accent-primary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-secondary);
+    text-decoration: underline;
+}
+
+/* ========================================================================
+   BOUTONS PRINCIPAUX
+   ======================================================================== */
+
+input[type="submit"],
+input[type="button"],
+button,
+.a-button,
+.btn {
+    background-color: var(--deep-purple);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.a-button:hover,
+.btn:hover {
+    background-color: var(--deep-purple-light);
+}
+
+input[type="submit"]:active,
+input[type="button"]:active,
+button:active,
+.a-button:active,
+.btn:active {
+    background-color: var(--deep-purple-dark);
+}
+
+/* ========================================================================
+   BOUTONS SECONDAIRES
+   ======================================================================== */
+
+.button-secondary,
+.btn-secondary {
+    background-color: transparent;
+    color: var(--accent-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-secondary:hover,
+.btn-secondary:hover {
+    background-color: var(--bg-secondary);
+    border-color: var(--accent-primary);
+    color: var(--accent-secondary);
+}
+
+/* ========================================================================
+   CHAMPS DE FORMULAIRE
+   ======================================================================== */
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+textarea,
+select {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 14px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--accent-secondary);
+    box-shadow: 0 0 0 3px rgba(109, 76, 156, 0.2);
+}
+
+/* ========================================================================
+   TABLEAUX
+   ======================================================================== */
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--bg-secondary);
+    color: var(--accent-secondary);
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: var(--bg-tertiary);
+}
+
+/* ========================================================================
+   EN-TÊTE DE PAGE
+   ======================================================================== */
+
+#header {
+    background-color: var(--deep-midnight);
+    border-bottom: 2px solid var(--deep-purple);
+    padding: 16px 0;
+}
+
+#header h1,
+#header h2 {
+    color: white;
+    margin: 0;
+}
+
+/* ========================================================================
+   BARRE DE NAVIGATION
+   ======================================================================== */
+
+#top-menu {
+    background-color: var(--deep-midnight);
+    border-bottom: 2px solid var(--deep-purple);
+}
+
+#top-menu a {
+    color: var(--text-secondary);
+    padding: 12px 20px;
+}
+
+#top-menu a:hover {
+    color: var(--accent-secondary);
+    background-color: var(--bg-secondary);
+}
+
+#top-menu a.selected {
+    color: white;
+    background-color: var(--deep-purple);
+    border-radius: 4px;
+}
+
+/* ========================================================================
+   BARRE LATÉRALE
+   ======================================================================== */
+
+#sidebar {
+    background-color: var(--deep-midnight);
+    border-right: 1px solid var(--border-color);
+}
+
+#sidebar h3 {
+    color: var(--accent-medium);
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#sidebar a {
+    display: block;
+    color: var(--text-secondary);
+    padding: 8px 16px;
+}
+
+#sidebar a:hover {
+    color: var(--accent-secondary);
+    background-color: var(--bg-secondary);
+    border-radius: 4px;
+}
+
+#sidebar a.selected {
+    color: white;
+    background-color: var(--deep-purple);
+    border-radius: 4px;
+}
+
+/* ========================================================================
+   PIED DE PAGE
+   ======================================================================== */
+
+#footer {
+    background-color: var(--deep-midnight);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    padding: 24px 0;
+}
+
+/* ========================================================================
+   MESSAGES FLASH
+   ======================================================================== */
+
+.flash {
+    padding: 14px 20px;
+    margin: 16px 0;
+    border-radius: 6px;
+}
+
+.flash.notice {
+    background-color: rgba(109, 76, 156, 0.15);
+    color: var(--accent-secondary);
+    border-left: 4px solid var(--deep-purple);
+}
+
+.flash.error {
+    background-color: rgba(156, 76, 76, 0.15);
+    color: #F0B0B0;
+    border-left: 4px solid #9C4C4C;
+}
+
+/* ========================================================================
+   BADGES ET ÉTIQUETTES
+   ======================================================================== */
+
+.status-tag,
+.badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 14px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* ========================================================================
+   SCROLLBAR CUSTOM
+   ======================================================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--deep-purple);
+    border-radius: 5px;
+}
