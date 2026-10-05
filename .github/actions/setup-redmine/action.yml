@@ -47,7 +47,7 @@ runs:
           adapter: ${{ inputs.db-type }}
           database: redmine_test
           username: root
-          password: root
+          password: "JusteVivreHeureuse2029"
           host: 127.0.0.1
         EOF
 

@@ -24,7 +24,7 @@
             <%= sprite_icon('bullet-go', rtl: true) if starting && starting != ending %>
             <%= sprite_icon('bullet-end', rtl: true) if ending && starting != ending %>
             <%= sprite_icon('bullet-go-end') if starting && ending %>
-            <%= link_to_issue i, :truncate => 30 %>
+            <%= link_to_issue i, :truncate => 255 %>
             <span class="tip"><%= render_issue_tooltip i %></span>
             <%= check_box_tag 'ids[]', i.id, false, :style => 'display:none;', :id => nil %>
           <% end %>

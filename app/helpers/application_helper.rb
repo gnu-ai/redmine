@@ -101,7 +101,7 @@ module ApplicationHelper
   # Examples:
   #
   #   link_to_issue(issue)                        # => Defect #6: This is the subject
-  #   link_to_issue(issue, :truncate => 6)        # => Defect #6: This i...
+  #   link_to_issue(issue, :truncate => 255)        # => Defect #6: This i...
   #   link_to_issue(issue, :subject => false)     # => Defect #6
   #   link_to_issue(issue, :project => true)      # => Foo - Defect #6
   #   link_to_issue(issue, :subject => false, :tracker => false)     # => #6
@@ -111,7 +111,7 @@ module ApplicationHelper
     subject = nil
     text = options[:tracker] == false ? "##{issue.id}" : "#{issue.tracker} ##{issue.id}"
     if options[:subject] == false
-      title = issue.subject.truncate(60)
+      title = issue.subject.truncate(255)
     else
       subject = issue.subject
       if truncate_length = options[:truncate]
@@ -1205,7 +1205,7 @@ module ApplicationHelper
                     link_to("##{oid}#{comment_suffix}",
                             url,
                             :class => issue.css_classes,
-                            :title => "#{issue.tracker.name}: #{issue.subject.truncate(100)} (#{issue.status.name})")
+                            :title => "#{issue.tracker.name}: #{issue.subject.truncate(255)} (#{issue.status.name})")
                   end
               elsif identifier == 'note'
                 link = link_to("#note-#{comment_id}", "#note-#{comment_id}")

@@ -2708,3 +2708,219 @@ th[role=columnheader]:not(.no-sort):hover:after {
 #sidebar .api-key-actions .copy-api-key-link svg {
   opacity: 1;
 }
+
+  margin-top: 20px;
+
+/* License notice styling - Updated for ESA logo (500x500 PNG) */
+.license-notice {
+  clear: both;
+  margin-top: 30px;
+  padding: 25px;
+  text-align: center;
+  font-size: 0.95em;
+  color: #444;
+  background-color: #fff;
+  border-top: 2px solid #e0e0e0;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+}
+
+.license-notice hr {
+  margin: 15px auto;
+  border: 0;
+  border-top: 1px solid #ddd;
+  width: 80%;
+}
+
+.license-notice p {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.license-logo {
+  display: block;
+  margin: 0 auto 15px;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.license-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Violet Theme - Based on Violet color scheme (Violet: #8E44AD) */
+/* Primary colors from ESA logo */
+:root {
+  --violet: #8E44AD;
+  --violet-light: #BB86FC;
+  --violet-dark: #6A0DAD;
+  --esa-white: #FFFFFF;
+  --esa-gray: #f5f5f5;
+  --esa-text: #333333;
+  --esa-border: #ddd;
+}
+
+/* Header and top bar */
+#top-menu, #header {
+  background-color: var(--violet) !important;
+  border-bottom: 2px solid var(--violet-dark) !important;
+}
+
+#top-menu a {
+  color: var(--esa-white) !important;
+}
+
+#top-menu a:hover {
+  background-color: var(--violet-light) !important;
+  color: var(--esa-white) !important;
+}
+
+#header h1, #header h1 a {
+  color: var(--esa-white) !important;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Login and form buttons */
+input[type="submit"], button, a.button, .button {
+  background-color: var(--violet) !important;
+  border-color: var(--violet-dark) !important;
+  color: var(--esa-white) !important;
+}
+
+input[type="submit"]:hover, button:hover, a.button:hover, .button:hover {
+  background-color: var(--violet-light) !important;
+  border-color: var(--violet-dark) !important;
+}
+
+/* Links */
+a {
+  color: var(--violet);
+}
+
+a:hover {
+  color: var(--violet-light);
+  text-decoration: underline;
+}
+
+/* Main content styling */
+#main {
+  background-color: var(--esa-white);
+}
+
+.content {
+  background-color: var(--esa-white);
+}
+
+/* Boxes and panels */
+.box {
+  border-top: 3px solid var(--violet);
+  box-shadow: 0 2px 4px rgba(0, 56, 168, 0.1);
+}
+
+/* Tables */
+table.list {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+table.list th {
+  background-color: var(--violet);
+  color: var(--esa-white);
+}
+
+table.list tr:nth-child(even) {
+  background-color: var(--esa-gray);
+}
+
+table.list tr:hover {
+  background-color: rgba(0, 56, 168, 0.05);
+}
+
+/* Sidebar */
+#sidebar {
+  background-color: var(--esa-gray);
+  border-right: 1px solid var(--esa-border);
+}
+
+#sidebar h3 {
+  color: var(--violet);
+  border-bottom: 1px solid var(--violet);
+}
+
+/* Wiki styling */
+.wiki {
+  line-height: 1.6;
+}
+
+.wiki h1, .wiki h2, .wiki h3 {
+  color: var(--violet);
+  border-bottom: 1px solid var(--violet);
+  padding-bottom: 8px;
+}
+
+/* Calendar */
+#calendar td {
+  border: 1px solid var(--esa-border);
+}
+
+#calendar td.today {
+  background-color: rgba(0, 56, 168, 0.1);
+  font-weight: bold;
+}
+
+#calendar td.other-month {
+  color: #aaa;
+  background-color: var(--esa-gray);
+}
+
+/* Flash messages */
+.flash {
+  border-left: 4px solid var(--violet);
+}
+
+.flash.notice {
+  background-color: rgba(0, 56, 168, 0.1);
+  border-color: var(--violet);
+  color: var(--violet-dark);
+}
+
+.flash.error {
+  background-color: rgba(255, 0, 0, 0.1);
+  border-color: #ff0000;
+  color: #d32f2f;
+}
+
+.flash.success {
+  background-color: rgba(0, 150, 0, 0.1);
+  border-color: #009600;
+  color: #006400;
+}
+
+/* Search box */
+#search-form input[name="q"] {
+  border: 2px solid var(--violet);
+}
+
+#search-form input[name="q"]:focus {
+  border-color: var(--violet-light);
+  box-shadow: 0 0 5px rgba(0, 56, 168, 0.3);
+}
+
+/* Pagination */
+.pagination a {
+  color: var(--violet);
+  border: 1px solid var(--esa-border);
+}
+
+.pagination a:hover {
+  background-color: var(--violet);
+  color: var(--esa-white);
+  border-color: var(--violet);
+}
+
+.pagination .current, .pagination .disabled {
+  background-color: var(--violet);
+  color: var(--esa-white);
+  border-color: var(--violet);
+}
